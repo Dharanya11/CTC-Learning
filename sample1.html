@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Color Change</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .outer-circle {
+            width: 450px;
+            height: 450px;
+            background-color: blue;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .middle-circle {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .inner-circle {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+
+        .inner-circle:hover {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="outer-circle" onclick="changeColor()">
+        <div class="middle-circle">
+            <div class="inner-circle"></div>
+        </div>
+    </div>
+
+    <script>
+        function changeColor() {
+            document.querySelector(".outer-circle").style.backgroundColor = "purple";
+        }
+    </script>
+
+</body>
+
+</html>
